@@ -1,0 +1,4 @@
+This is a toy example for illustrating the usefulness of Storm in two use cases: stream processing and continuous computation.
+
+In this example we are fetching Craiglist feeds continuously and computing the 10 most recent listings parsed.
+
