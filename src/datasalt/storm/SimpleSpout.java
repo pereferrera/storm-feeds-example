@@ -11,47 +11,47 @@ import backtype.storm.topology.OutputFieldsDeclarer;
  * This class just overrides some methods from IRichSpout so that you don't need to override them if you extend it.
  * 
  * @author pere
- *
+ * 
  */
 @SuppressWarnings("rawtypes")
 public class SimpleSpout implements IRichSpout {
 
-  private static final long serialVersionUID = 1L;
-  
+	private static final long serialVersionUID = 1L;
+
 	protected SpoutOutputCollector collector;
-  Map conf;
+	Map conf;
 	TopologyContext context;
-	 
-	@Override
-  public void open(Map conf, TopologyContext context, SpoutOutputCollector collector) {
-	  this.collector = collector;
-	  this.conf = conf;
-	  this.context = context;
-  }
 
 	@Override
-  public void close() {
-  }
+	public void open(Map conf, TopologyContext context, SpoutOutputCollector collector) {
+		this.collector = collector;
+		this.conf = conf;
+		this.context = context;
+	}
 
 	@Override
-  public void nextTuple() {
-  }
+	public void close() {
+	}
 
 	@Override
-  public void ack(Object msgId) {
-  }
+	public void nextTuple() {
+	}
 
 	@Override
-  public void fail(Object msgId) {
-  }
+	public void ack(Object msgId) {
+	}
 
 	@Override
-  public void declareOutputFields(OutputFieldsDeclarer declarer) {
-	  
-  }
+	public void fail(Object msgId) {
+	}
 
 	@Override
-  public boolean isDistributed() {
-	  return true;
-  }
+	public void declareOutputFields(OutputFieldsDeclarer declarer) {
+
+	}
+
+	@Override
+	public boolean isDistributed() {
+		return true;
+	}
 }

@@ -3,10 +3,10 @@ package datasalt.storm.feeds;
 import java.util.regex.Pattern;
 
 /**
- * This is a very simple regex-based method for removing "boilerplate" (e.g. HTML tags, javascript...). 
+ * This is a very simple regex-based method for removing "boilerplate" (e.g. HTML tags, javascript...).
  * 
  * @author pere
- *
+ * 
  */
 public class RegexBoilerplateRemoval {
 

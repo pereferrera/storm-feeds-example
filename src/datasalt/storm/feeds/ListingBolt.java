@@ -21,11 +21,11 @@ import backtype.storm.tuple.Values;
 import backtype.storm.utils.Utils;
 
 /**
- * This class is a very simple example of real-time statistics computation.
- * It takes the listings parsed from {@link FetcherBolt} instances and calculates the last 10 listings emitted according to the listing date.
- *   
+ * This class is a very simple example of real-time statistics computation. It takes the listings parsed from
+ * {@link FetcherBolt} instances and calculates the last 10 listings emitted according to the listing date.
+ * 
  * @author pere
- *
+ * 
  */
 @SuppressWarnings("rawtypes")
 public class ListingBolt implements IRichBolt {
@@ -51,7 +51,8 @@ public class ListingBolt implements IRichBolt {
 						for(Tuple tuple : listings) {
 							ListingBolt.this.collector.emit(new Values(tuple.getStringByField("link"), tuple.getLongByField("date"),
 							    tuple.getStringByField("description")));
-							Log.info("Reporting listing URL: " + tuple.getStringByField("link") + " listing date: [" + new Date(tuple.getLongByField("date")) + "]");
+							Log.info("Reporting listing URL: " + tuple.getStringByField("link") + " listing date: ["
+							    + new Date(tuple.getLongByField("date")) + "]");
 						}
 					}
 					Log.info("Reporting finished.");

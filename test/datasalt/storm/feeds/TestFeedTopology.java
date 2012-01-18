@@ -18,7 +18,7 @@ public class TestFeedTopology {
 		conf.setNumWorkers(2);
 
 		LocalCluster cluster = new LocalCluster();
-		cluster.submitTopology("test", conf, FeedTopology.buildTopology( Constants.FEEDS ));
+		cluster.submitTopology("test", conf, FeedTopology.buildTopology(Constants.FEEDS));
 		Utils.sleep(30000);
 		cluster.killTopology("test");
 		cluster.shutdown();
